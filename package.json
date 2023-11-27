@@ -1,0 +1,36 @@
+{
+  "name": "node-aosmith",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/test.js",
+    "start-with-env": "env $(cat ENV_PATH | grep -v \"#\" | xargs) npm start --silent",
+    "dev": "nodemon --exec ts-node-esm src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "lint:check": "eslint --ext .ts src",
+    "lint:fix": "eslint --ext .ts src --fix",
+    "format:check": "prettier --check src/**/*.{ts,js,json,md}",
+    "format:fix": "prettier --write src/**/*.{ts,js,json,md}"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18",
+    "@typescript-eslint/eslint-plugin": "6",
+    "@typescript-eslint/parser": "6",
+    "eslint": "8",
+    "eslint-config-prettier": "9",
+    "eslint-plugin-prettier": "5",
+    "nodemon": "3",
+    "prettier": "3",
+    "ts-node": "10",
+    "typescript": "5"
+  },
+  "dependencies": {
+    "got": "^13.0.0"
+  }
+}
