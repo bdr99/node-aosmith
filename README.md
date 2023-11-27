@@ -164,7 +164,7 @@ Sets the operation mode of the water heater. To determine the list of modes supp
 
 None
 
-## Get energy use data by DSN
+## Get energy use data
 
 ```typescript
 await client.getEnergyUseData(junctionId)
